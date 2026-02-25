@@ -1,0 +1,132 @@
+@charset "UTF-8";
+
+/* common----------------------------------------- */
+
+html {
+    font-size: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Zen Maru Gothic", "mooli", "sans-serif";
+    line-height: 1.6;
+    color: #3f3f3f;
+    background-color: #ffffff;
+}
+
+img {
+    max-width: 1440px;
+    width: 100%;
+    vertical-align: bottom;
+    height: auto;
+    object-fit: cover;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h2 {
+    color: inherit;
+    margin-top: 6rem;
+    font-weight: normal;
+}
+
+h3 {
+    font-size: 1.75rem;
+    color: #C2C094;
+    letter-spacing: 0.2rem;
+    display: flex;
+    justify-content: start;
+    margin-block: 6rem;
+    padding-left: 3rem;
+    font-weight: 700;
+}
+
+.wrapper {
+    width: 90%;
+    max-width: 1296px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* backtotop */
+.backtotop {
+    display: flex;
+    justify-content: flex-end;
+    margin-block: 3rem;
+    margin-right: 2rem;
+}
+
+.backtotop a {
+    font-size: 1.125rem;
+    position: relative;
+    text-decoration: none;
+    color: #3f3f3f;
+    transition: all 0.3s ease;
+}
+
+.backtotop a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 0.8px;
+    background-color: #3f3f3f;
+    transition: width 0.3s ease;
+}
+
+.backtotop a:hover::after {
+    width: 100%;
+}
+
+/* footer------------------------------------------- */
+
+.footer {
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 0.75rem;
+}
+
+/* media queries------------------------------------ */
+@media (min-width: 768px) {
+
+    /* common */
+    body {
+        font-size: 1.125rem;
+        line-height: 1.8;
+    }
+
+    .wrapper {
+        width: 90%;
+        max-width: 1296px;
+        margin: 0 auto;
+    }
+
+    h3 {
+        font-size: 2.75rem;
+        color: inherit;
+        display: flex;
+        justify-content: start;
+        margin-block: 3rem;
+    }
+
+    .profile p {
+        font-size: 2rem;
+    }
+
+    .backtotop a {
+        font-size: 1.25rem;
+        margin-right: 1rem;
+    }
+
+    /* footer */
+    .footer {
+        text-align: center;
+        padding: 2rem 0;
+        font-size: 1rem;
+        margin-bottom: 3rem;
+    }
+}

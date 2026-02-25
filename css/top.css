@@ -1,0 +1,750 @@
+@charset "UTF-8";
+
+/* header--------------------------------------- */
+
+.inner-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 12px;
+}
+
+.inner-header img {
+    padding: 1rem 0;
+    width: 4rem;
+    height: auto;
+    object-fit: cover;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav li {
+    list-style-type: none;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 100%;
+    background: #716767;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translateX(100%);
+    transition: transform 0.4s ease;
+    z-index: 1001;
+    padding-top: 8rem;
+}
+
+.nav li {
+    list-style: none;
+    margin: 1.25rem 0;
+    text-align: center;
+}
+
+.nav a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 2rem;
+    font-weight: normal;
+    transition: color 0.4s ease;
+}
+
+.nav a:hover {
+    color: #ffeedb;
+}
+
+.nav.active {
+    transform: translateX(0);
+}
+
+/* hamburger button */
+.ham-btn {
+    position: fixed;
+    top: 1.5rem;
+    right: 0.938rem;
+    width: 50px;
+    height: 1.5rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    z-index: 1002;
+}
+
+.ham-btn span {
+    position: absolute;
+    left: 0;
+    width: 80%;
+    height: 3px;
+    background: #3f3f3f;
+    border-radius: 4px;
+    transition: all 0.4s ease;
+}
+
+.ham-btn span:nth-child(1) {
+    top: 8px;
+}
+
+.ham-btn span:nth-child(2) {
+    top: 20px;
+}
+
+.ham-btn span:nth-child(3) {
+    bottom: -12px;
+}
+
+/* animation */
+.ham-btn.active span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 10px;
+}
+
+.ham-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.ham-btn.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    bottom: 10px;
+}
+
+/* overlay */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* main--------------------------------------------- */
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    align-items: center;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    margin: 0 auto;
+    background: rgba(194, 192, 148, 0.5);
+    z-index: 1;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    background: rgba(187, 171, 139, 0.2);
+    z-index: 1;
+}
+
+.hero img {
+    position: absolute;
+    inset: 0;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    text-align: center;
+    color: #3f3f3f;
+    font-family: "Mooli", sans-serif;
+    z-index: 2;
+    animation: fadeInUp 1.8s ease-out 0.3s forwards;
+    opacity: 0;
+}
+
+/* hero text animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -40%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.hero-text h1 {
+    font-size: 2.0rem;
+    letter-spacing: 0.2rem;
+}
+
+.hero-text p {
+    font-size: 1.25rem;
+    margin-top: 0.5rem;
+}
+
+/* about */
+.about {
+    position: relative;
+    display: inline-block;
+    font-size: 1.25rem;
+    letter-spacing: 0.1rem;
+    margin-left: 0.4em;
+}
+
+.about::after {
+    content: "自己紹介";
+    position: absolute;
+    top: 85%;
+    left: -20%;
+    margin-left: 0.4em;
+    font-size: 1.125rem;
+    color: inherit;
+    white-space: nowrap;
+}
+
+.about-text {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.icon {
+    display: flex;
+    justify-content: space-around;
+    gap: 0.5rem;
+    padding: 0 1.25rem;
+    width: 16.25rem;
+    height: auto;
+    margin: 0 auto;
+}
+
+.icon img {
+    width: 1.875rem;
+    height: 1.875rem;
+    object-fit: cover;
+}
+
+.skill {
+    margin: 0 auto;
+    width: 16.25rem;
+    height: auto;
+    object-fit: cover;
+    margin-top: 4rem;
+}
+
+/* language */
+.language {
+    text-align: center;
+}
+
+/* qualification */
+.qualification {
+    text-align: center;
+}
+
+/* sitecolor */
+.sitecolor {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.inner-sitecolor {
+    margin-top: 3rem;
+    margin-bottom: 6rem;
+}
+
+.sitecolor img {
+    width: 14rem;
+    height: auto;
+    object-fit: cover;
+}
+
+/* logo */
+.logo img {
+    display: block;
+    margin: 0 auto 4rem auto;
+    width: 6rem;
+    height: auto;
+    object-fit: cover;
+}
+
+.text {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.concept {
+    text-align: center;
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+}
+
+.concept-text {
+    text-align: center;
+}
+
+.design-intent {
+    text-align: center;
+    margin-block: 3rem;
+}
+
+.sitemap img {
+    display: block;
+    width: 32rem;
+    height: auto;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+/* hobby */
+.hobby-text {
+    font-size: 1rem;
+    margin-bottom: 5rem;
+}
+
+.hobby-photo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 92%;
+    margin: 0 auto;
+}
+
+.hobby-photo img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    border-radius: 20px;
+    object-fit: cover;
+    display: block;
+}
+
+.hobby-photo img:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(136, 160, 150, 1);
+}
+
+
+.hobby-photo p {
+    text-align: center;
+    font-size: 0.875rem;
+}
+
+/* works */
+.works {
+    position: relative;
+    display: inline-block;
+    font-size: 1.25rem;
+    letter-spacing: 0.1rem;
+    margin-left: 0.2em;
+}
+
+.works::after {
+    content: "作品紹介";
+    position: absolute;
+    top: 85%;
+    left: -20%;
+    margin-left: 0.4em;
+    font-size: 1.125rem;
+    color: #3f3f3f;
+    white-space: nowrap;
+}
+
+.works-photo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-left: 0.4em;
+    max-width: 92%;
+    margin: 0 auto;
+}
+
+.works-photo img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    border-radius: 12px;
+    object-fit: cover;
+    display: block;
+}
+
+.works-photo img:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(136, 160, 150, 1);
+}
+
+.works-photo p {
+    text-align: center;
+    font-size: 0.875rem;
+}
+
+/* contact */
+.contact {
+    position: relative;
+    display: inline-block;
+    font-size: 1.25rem;
+    letter-spacing: 0.1rem;
+    margin-left: 0.4em;
+}
+
+.contact::after {
+    content: "お問い合わせ";
+    position: absolute;
+    top: 85%;
+    left: -25%;
+    margin-left: 0.4em;
+    font-size: 1.125rem;
+    color: inherit;
+    white-space: nowrap;
+}
+
+.inner-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.2rem;
+    margin-bottom: 3rem;
+}
+
+
+.inner-contact p {
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: inherit;
+    margin-bottom: 2rem;
+}
+
+/* yahoo mail button */
+.inner-contact a {
+    font-size: 0.875rem;
+}
+
+.contact-img img {
+    width: 60px;
+    height: 60px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-img img:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(136, 160, 150, 1);
+}
+
+/* Instagram button */
+.insta-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #C2C094;
+    color: #fff;
+    text-decoration: none;
+    width: 85px;
+    height: 40px;
+    line-height: 50px;
+    padding: 0.5rem 1.2rem;
+    margin-bottom: 1.25rem;
+    border-radius: 999px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.insta-btn:hover {
+    background-color: #88A096;
+    transform: translateY(-2px);
+}
+
+.mail-contact,
+.instagram-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* media queries------------------------------------ */
+
+@media (min-width: 768px) {
+
+    /* header */
+    /* header .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+    } */
+
+    header .inner-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+    }
+
+    .inner-header img {
+        padding: 1rem 0;
+        width: 6rem;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .nav {
+        position: static;
+        transform: none;
+        background: transparent;
+        height: auto;
+        flex-direction: row;
+        padding-top: 0;
+        padding-right: 2rem;
+        gap: 3rem;
+    }
+
+    .nav a {
+        font-size: 1.5rem;
+    }
+
+    .ham-btn {
+        display: none;
+    }
+
+    /* main */
+    .hero {
+        position: relative;
+        display: inline-block;
+    }
+
+    .hero img {
+        width: 100%;
+        height: 100vh;
+        display: block;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        object-position: left center;
+        display: block;
+    }
+
+    .hero-text {
+        position: absolute;
+        top: 50%;
+        left: 65%;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-text p {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+        color: #C2C094;
+        letter-spacing: 0.2rem;
+        display: flex;
+        justify-content: start;
+        margin-block: 10rem;
+        padding-left: 3rem;
+    }
+
+    .about {
+        position: relative;
+        display: inline-block;
+        font-size: 2rem;
+        margin-top: 4rem;
+    }
+
+    .about::after {
+        content: "自己紹介";
+        position: absolute;
+        top: 85%;
+        left: -25%;
+        margin-left: 0.8em;
+        font-size: 1.5rem;
+        color: #3f3f3f;
+        white-space: nowrap;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .about-text p {
+        font-size: 1.25rem;
+        line-height: 2.0;
+    }
+
+    .icon {
+        display: flex;
+        justify-content: space-around;
+        gap: 1rem;
+        margin: 0 auto;
+    }
+
+    .icon img {
+        width: 2.75rem;
+        height: 2.75rem;
+        object-fit: cover;
+    }
+
+    .skill img {
+        margin: 0 auto;
+        width: 25rem;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .language p {
+        font-size: 1.25rem;
+    }
+
+    .qualification p {
+        font-size: 1.25rem;
+        text-align: center;
+    }
+
+    .sitecolor .inner-sitecolor {
+        font-size: 1.25rem;
+        text-align: center;
+    }
+
+    .sitecolor .text {
+        font-size: 1.25rem;
+        text-align: center;
+    }
+
+    .sitecolor img {
+        width: 16rem;
+    }
+
+    .logo .concept-text {
+        font-size: 1.25rem;
+    }
+
+    .logo .text {
+        font-size: 1.25rem;
+        text-align: center;
+    }
+
+    .sitemap img {
+        width: 40rem;
+    }
+
+    .hobby .hobby-text p {
+        font-size: 1.25rem;
+        text-align: center;
+    }
+
+    .hobby-photo {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3.5rem;
+    }
+
+    .hobby-photo p {
+        font-size: 1rem;
+    }
+
+    .profile {
+        margin-top: 8rem;
+    }
+
+    .works {
+        position: relative;
+        display: inline-block;
+        font-size: 2rem;
+    }
+
+    .works::after {
+        content: "作品紹介";
+        position: absolute;
+        top: 85%;
+        left: -25%;
+        margin-left: 0.8em;
+        font-size: 1.5rem;
+        color: #3f3f3f;
+        white-space: nowrap;
+    }
+
+    .works-photo {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3.5rem;
+    }
+
+    .works-photo p {
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .contact {
+        position: relative;
+        display: inline-block;
+        font-size: 2rem;
+        margin-top: 2rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .contact::after {
+        content: "お問い合わせ";
+        position: absolute;
+        top: 85%;
+        left: -25%;
+        margin-left: 0.8em;
+        font-size: 1.5rem;
+        color: #3f3f3f;
+        white-space: nowrap;
+    }
+
+    .inner-contact {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+
+    .inner-contact p {
+        text-align: center;
+        font-size: 1.25rem;
+    }
+
+    .mail-contact .contact-img {
+        margin-top: 3rem;
+    }
+
+    /* instagram button hover */
+    .insta-btn {
+        padding: 2rem 4rem;
+        border-radius: 99px;
+        font-size: 2rem;
+        font-weight: bold;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .footer {
+        font-size: 1rem;
+    }
+
+}
