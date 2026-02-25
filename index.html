@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- description -->
+    <meta name="description" content="Hitomi Okabeのポートフォリオサイトです">
+    <title>portfolio</title>
+    <!-- reset.css ress -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mooli&family=Zen+Maru+Gothic:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- original css -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/top.css">
+</head>
+
+<body>
+    <header id="header" class="header">
+        <div class="inner-header">
+            <img src="./image/logo.svg" alt="hitomiokabeのwebサイトのロゴ">
+            <nav>
+                <ul class="nav" id="navMenu">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#hobby">Hobby</a></li>
+                    <li><a href="#works">Works</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- hamburger button -->
+        <button class="ham-btn" id="hamBtn" type="button" aria-label="メニュー開閉">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="overlay" id="overlay"></div>
+    </header>
+    <main>
+        <section class="hero">
+            <picture>
+                <source srcset="./image/maron-top-pc.jpg" media="(min-width: 600px)">
+                <img src="./image/maron-top-sp.jpg" alt="メインビジュアル">
+            </picture>
+            <div class="hero-text">
+                <h1>Hitomi Okabe Portfolio</h1>
+                <p>less is more...</p>
+            </div>
+        </section>
+        <section id="about" class="wrapper profile">
+            <h2 class="about">About</h2>
+            <h3>About me</h3>
+            <div class="about-text">
+                <p>はじめまして。岡部瞳です。<br>
+                    <br>
+                    作業療法士として医療現場に携わった経験から、相手の気持ちに寄り添う視点を大切にしてきました。<br>
+                    その経験を活かし、現在は公共職業訓練校にてWebデザインを学び、UI/UXを意識した制作に取り組んでいます。<br>
+                    <br>
+                    ふるさと納税にも興味があり、日頃からユーザー目線で情報収集を行っています。
+                </p>
+            </div>
+            <h3>Skill</h3>
+            <div class="icon">
+                <img src="./image/devicon_illustrator.svg" alt="illustrator">
+                <img src="./image/devicon_photoshop.svg" alt="photoshop">
+                <img src="./image/devicon_premierepro.svg" alt="premierepro">
+                <img src="./image/skill-icons_vscode-dark.svg" alt="vscode">
+                <img src="./image/skill-icons_figma-light.svg" alt="figma">
+                <img src="./image/devicon_canva.svg" alt="canva">
+            </div>
+            <div class="skill"><img src="./image/frame 64.svg" alt="スキルの表示"></div>
+            <div class="language">
+                <h3>Language</h3>
+                <p>HTML5 / CSS3 / JavaScript(基礎)</p>
+            </div>
+            <div class="qualification">
+                <h3>Qualification</h3>
+                <p>Webクリエイター能力認定試験エキスパート</p>
+            </div>
+            <div class="sitecolor">
+                <h3>Site Color</h3>
+                <img src="./image/sitecolor.jpg" alt="portfolioのサイトカラー">
+                <p class="inner-sitecolor">ナチュラル × ミニマルに</p>
+                <div class="sitecolor-concept">
+                    <p class="concept">Concept</p>
+                    <p class="text">飾り気なく、自然体のままのわたしを見てほしい。<br>
+                        そんな想いを軸に、日常の延長にある “少ないほど豊か（less is more）” を表現しました。</p>
+                </div>
+                <div class="design-intent">
+                    <p class="design-intent">Design Intent</p>
+                    <p class="text">全体は優しい Sage と透明感のある Cambridge Blue を中心に、落ち着いた空気の中に静かな個性が浮かび上がるように設計しています。<br>
+                        背景の Whiteは余白の美しさを際立たせ、アクセントの Charcoal Gray が情報に確かな芯を与えています。<br>
+                        <br>
+                        飾らず、そっと寄り添うような色を選ぶことで、私の等身大の魅力が自然と伝わる構成にしました。
+                    </p>
+                </div>
+            </div>
+            <div class="logo">
+                <h3>Logo</h3>
+                <img src="./image/logo.svg" alt="hitomiokabeのロゴ">
+                <p class="concept">Concept</p>
+                <p class="concept-text">飾らない、自然体の透明感</p>
+                <p class="design-intent">Design Intent</p>
+                <p class="text">
+                    このロゴは「等身大のわたし」をそのまま届ける思いを、Ｏの形で表現しています。<br>
+                    円は「余白・穏やかさ・やわらかさ」を象徴し、線の細さと軽やかな傾きで、自然体でありながら洗練された印象に仕上げました。<br>
+                    <br>
+                    余計な装飾をそぎ落とすことで less is more の美学を具現化。<br>
+                    見た人に、優しさや透明感、静かな上品さを直感的に感じてもらえるデザインです。
+                </p>
+            </div>
+            <div class="sitemap">
+                <h3>Site Map</h3>
+                <img src="./image/sitemap.png" alt="サイトマップ">
+            </div>
+        </section>
+        <section id="hobby" class="wrapper profile">
+            <div class="hobby">
+                <h3>Hobby</h3>
+                <div class="hobby-text">
+                    <p>多趣味ですが、特に写真と料理が好きです。<br>
+                        料理は地域の特産物をお取り寄せして作って楽しんでいます。<br>
+                        <br>
+                        カメラを購入予定ですが、現在はもっぱらiPhone X で撮影しています。
+                    </p>
+                </div>
+                <div class="hobby-photo">
+                    <div>
+                        <a href="./about.html#maron-top"><img src="./image/maron-hobby-pc.jpg" alt="栗の渋皮煮"></a>
+                        <p>01 写真と料理 </p>
+                    </div>
+                    <div class="inner-image2">
+                        <a href="./about.html#kaisen-top"><img src="./image/kaisen-hobby-pc.jpg" alt="海鮮漬け丼"></a>
+                        <p>02 写真と料理</p>
+                    </div>
+                    <div class="inner-image3">
+                        <a href="./about.html#rostbeef-top"><img src="./image/rostbeef-hobby-pc.jpg" alt="ローストビーフ"></a>
+                        <p>03 写真と料理</p>
+                    </div>
+                    <div class="inner-image4">
+                        <a href="./about.html#rafrance-top"><img src="./image/rafrance-hobby-pc.jpg" alt="洋梨ジャム"></a>
+                        <p>04 写真と料理</p>
+                    </div>
+                    <div class="inner-image5">
+                        <a href="./about.html#coffee-top"><img src="./image/coffee-hobby-pc.jpg" alt="ケーキと珈琲"></a>
+                        <p>05 絵画と音楽と珈琲</p>
+                    </div>
+                    <div class="inner-image6">
+                        <a href="./about.html#trip-top"><img src="./image/miyajima-hobby-pc.jpg" alt="海の中の宮島の赤い鳥居"></a>
+                        <p>06 旅と美術展</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="works" class="wrapper profile">
+            <h2 class="works">Works</h2>
+            <h3>Works</h3>
+            <div class="works-photo">
+                <div>
+                    <a href="./works.html#website-top"><img src="./image/screencapture.png"
+                            alt="おむすび屋むすびのWebサイトPCのモックアップ"></a>
+                    <p>01 Webサイト</p>
+                </div>
+                <div>
+                    <a href="./works.html#gyoza"><img src="./image/gyoza.png" alt="餃子フェスの画像"></a>
+                    <p>02 Webサイト</p>
+                </div>
+                <div>
+                    <a href="./banner.html#banner-top"><img src="./image/hamburger-outline.jpg" alt="hamburgerのバナー"></a>
+                    <p>03 バナー</p>
+                </div>
+                <div>
+                    <a href="./banner.html#fitness"><img src="./image/fine peak-01.png" alt="ジムバナー"></a>
+                    <p>04 バナー</p>
+                </div>
+                <div>
+                    <a href="./banner.html#uv"><img src="./image/uv.png" alt="UVポスターバナー"></a>
+                    <p>05 バナー</p>
+                </div>
+                <div>
+                    <a href="./movie.html"><img src="./image/movie-screen.png" alt="動画へのリンク"></a>
+                    <p>06 動画</p>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="wrapper profile">
+            <h2 class="contact">Contact</h2>
+            <h3>Thank you for watching</h3>
+            <div class="inner-contact">
+                <div class="mail-contact">
+                    <p>portfolioを最後までご覧いただきありがとうございます。<br>
+                        お問い合わせはmailまたはInstagramのDMまでお願いいたします。</p>
+                    <div class="contact-img">
+                        <a href="mailto:hitomi.okabe@ymail.ne.jp" class="yahoo-mail-icon">
+                            <img src="./image/arcticons_yahoo-mail.svg" alt="Yahoo Mail">
+                        </a>
+                    </div>
+                    <p>Yahoo Mail</p>
+                </div>
+                <div class="instagram-contact">
+                    <a href="https://www.instagram.com/h______okabe/" target="_blank" rel="noopener noreferrer"
+                        class="insta-btn">Instagram</a>
+                    <p>Instagram DM</p>
+                </div>
+            </div>
+        </section>
+        <p class="backtotop"><a href="#header">Back to Top</a></p>
+    </main>
+    <footer class="footer">
+        <small>&copy;Hitomi Okabe</small>
+    </footer>
+</body>
+<script src="./js/script.js"></script>
+
+</html>
