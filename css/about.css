@@ -1,0 +1,497 @@
+@charset "UTF-8";
+
+/* header--------------------------------------- */
+
+.home {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.home a {
+    font-size: 1.125rem;
+    position: relative;
+    text-decoration: none;
+    color: #3f3f3f;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 5rem;
+    margin-right: 3rem;
+    width: fit-content;
+}
+
+.home a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 1px;
+    background-color: #3f3f3f;
+    transition: width 0.3s ease;
+}
+
+.home a:hover::after {
+    width: 100%;
+}
+
+.about {
+    position: relative;
+    display: inline-block;
+    font-size: 1.25rem;
+    letter-spacing: 0.1rem;
+    margin-left: 3rem;
+}
+
+.about::after {
+    content: "自己紹介";
+    position: absolute;
+    top: 85%;
+    left: -20%;
+    margin-left: 0.4em;
+    font-size: 1.125rem;
+    color: inherit;
+    white-space: nowrap;
+}
+
+/* main------------------------------------------------- */
+
+.about-list {
+    display: block;
+}
+
+/* maron */
+.maron {
+    height: auto;
+}
+
+.maron img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.maron p {
+    font-size: 1rem;
+    text-align: left;
+    padding: 8rem 2rem 0 2rem;
+    line-height: 1.6;
+}
+
+.maron-pc {
+    display: none;
+}
+
+/* kaisen */
+.kaisen {
+    height: auto;
+    border-radius: 20px;
+}
+
+.kaisen img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.kaisen p {
+    font-size: 1rem;
+    text-align: left;
+    padding: 8rem 2rem 0 2rem;
+    line-height: 1.6;
+}
+
+.kaisen-pc {
+    display: none;
+}
+
+/* rostbeef */
+.rostbeef {
+    height: auto;
+    border-radius: 20px;
+}
+
+.rostbeef img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.rostbeef p {
+    font-size: 1rem;
+    text-align: left;
+    padding: 8rem 2rem 0 2rem;
+    line-height: 1.6;
+}
+
+.rostbeef-pc {
+    display: none;
+}
+
+/* rafrance */
+.rafrance {
+    height: auto;
+    border-radius: 20px;
+}
+
+.rafrance img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.rafrance p {
+    font-size: 1rem;
+    text-align: left;
+    padding: 8rem 2rem 0 2rem;
+    line-height: 1.6;
+}
+
+.rafrance-pc {
+    display: none;
+}
+
+/* coffee */
+.inner-coffee {
+    height: auto;
+    padding-bottom: 2rem;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.coffee-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.inner-coffee p {
+    font-size: 1rem;
+    text-align: left;
+    padding: 8rem 2rem 0 2rem;
+    line-height: 1.6;
+}
+
+.guitar {
+    border-radius: 20px;
+}
+
+.painting {
+    border-radius: 20px;
+}
+
+.musictape {
+    border-radius: 20px;
+}
+
+.coffee {
+    border-radius: 20px;
+}
+
+/* trip */
+.inner-trip {
+    height: auto;
+    padding-bottom: 2rem;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.trip-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.inner-trip p {
+    font-size: 1rem;
+    text-align: left;
+    padding: 8rem 2rem 0 2rem;
+    line-height: 1.6;
+}
+
+.miyajima {
+    border-radius: 20px;
+}
+
+.yamaguchi {
+    border-radius: 20px;
+}
+
+.basquiat {
+    border-radius: 20px;
+}
+
+.tokyo {
+    border-radius: 20px;
+}
+
+.about-top .backtotop {
+    font-size: 1.5rem;
+    padding: 1.5rem 1rem;
+}
+
+/* media queries------------------------------------ */
+
+@media (min-width: 768px) {
+
+    /* common */
+    .section {
+        display: none;
+    }
+
+    h3 {
+        font-size: 2rem;
+        color: #C2C094;
+        text-align: left;
+    }
+
+    /* header */
+    /* .about-top {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    } */
+
+    .about {
+        position: relative;
+        display: inline-block;
+        font-size: 2.25rem;
+        margin-top: 10rem;
+        margin-bottom: 6rem;
+        margin-left: 8rem;
+    }
+
+    .about::after {
+        content: "自己紹介";
+        position: absolute;
+        top: 65%;
+        left: -20%;
+        margin-left: 0.8rem;
+        font-size: 1.75rem;
+        color: #3f3f3f;
+        white-space: nowrap;
+    }
+
+    .nav a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        width: 0;
+        height: 2px;
+        background-color: #3f3f3f;
+        transition: width 0.3s ease;
+    }
+
+    .about-top .nav {
+        font-size: 2rem;
+        padding: 2rem 1rem;
+    }
+
+    .home a {
+        font-size: 1.25rem;
+        position: relative;
+        text-decoration: none;
+        color: #3f3f3f;
+        transition: all 0.3s ease;
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 5rem;
+        margin-right: 5rem;
+        width: fit-content;
+    }
+
+    .home a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        width: 0;
+        height: 1px;
+        background-color: #3f3f3f;
+        transition: width 0.3s ease;
+    }
+
+    .home a:hover::after {
+        width: 100%;
+    }
+
+    /* common img */
+    .container {
+        flex: 1;
+    }
+
+    .container img {
+        height: 416px;
+        overflow: hidden;
+
+    }
+
+    /* maron */
+    .maron-top {
+        position: relative;
+    }
+
+    .maron-pc {
+        display: flex;
+        justify-content: space-between;
+        gap: 3rem;
+        margin-block: 8rem;
+    }
+
+    .maron-pc img {
+        width: 100%;
+        height: 100%;
+        border-radius: 35px;
+    }
+
+    .maron-text-pc {
+        flex: 1;
+    }
+
+    .maron-text-pc p {
+        font-size: 1.25rem;
+        line-height: 2.0;
+        text-align: start;
+        padding: 0;
+    }
+
+    .maron-sp {
+        display: none;
+    }
+
+    /* kaisen */
+    .kaisen-top {
+        position: relative;
+    }
+
+    .kaisen-pc {
+        display: flex;
+        justify-content: space-between;
+        gap: 3rem;
+        margin-block: 8rem;
+    }
+
+    .kaisen-pc img {
+        width: 100%;
+        height: 100%;
+        border-radius: 35px;
+    }
+
+    .kaisen-text-pc {
+        flex: 1;
+    }
+
+    .kaisen-text-pc p {
+        font-size: 1.25rem;
+        line-height: 2.0;
+        text-align: start;
+        padding: 0;
+    }
+
+
+    .kaisen-sp {
+        display: none;
+    }
+
+    /* rostbeef */
+    .rostbeef-top {
+        position: relative;
+    }
+
+    .rostbeef-pc {
+        display: flex;
+        justify-content: space-between;
+        gap: 3rem;
+        margin-block: 8rem;
+    }
+
+    .rostbeef-pc img {
+        width: 100%;
+        height: 100%;
+        border-radius: 35px;
+    }
+
+    .rostbeef-text-pc {
+        flex: 1;
+    }
+
+    .rostbeef-text-pc p {
+        font-size: 1.25rem;
+        line-height: 2.0;
+        text-align: start;
+        padding: 0;
+    }
+
+    .rostbeef-sp {
+        display: none;
+    }
+
+    /* rafrance */
+    .rafrance-top {
+        position: relative;
+    }
+
+    .rafrance-pc {
+        display: flex;
+        justify-content: space-between;
+        gap: 3rem;
+        margin-block: 8rem;
+    }
+
+    .rafrance-pc img {
+        width: 100%;
+        height: 100%;
+        border-radius: 35px;
+    }
+
+    .rafrance-text-pc {
+        flex: 1;
+    }
+
+    .rafrance-text-pc p {
+        font-size: 1.25rem;
+        line-height: 2.0;
+        text-align: start;
+        padding: 0;
+    }
+
+    .rafrance-sp {
+        display: none;
+    }
+
+    /* coffee */
+    .coffee-list {
+        gap: 2rem;
+    }
+
+    .inner-coffee p {
+        font-size: 1.25rem;
+        line-height: 2.0;
+        text-align: center;
+        padding: 6rem;
+    }
+
+    /* trip */
+    .trip-list {
+        gap: 2rem;
+    }
+
+    .inner-trip p {
+        font-size: 1.25rem;
+        line-height: 2.0;
+        text-align: center;
+        padding: 6rem;
+    }
+
+    /* backtotop */
+    .backtotop {
+        font-size: 1.5rem;
+        padding: 1.5rem 1rem;
+    }
+}
